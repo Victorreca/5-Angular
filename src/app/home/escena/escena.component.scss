@@ -1,0 +1,33 @@
+.navigation-buttons {
+  position: relative;
+  text-align: center;
+  // background-color: red;
+}
+.carousel-inner {
+  .img-cards {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+.indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  width: 30px;
+  height: 10px;
+  background-color: black;
+  border-radius: 5px;
+}

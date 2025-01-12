@@ -10,4 +10,17 @@ import { CommonModule } from '@angular/common';
 })
 export class EscenaComponent {
   @Input() stepsChild: IStep[] = [];
+
+  currentStep = 0;
+
+  nextStep(): void {
+    if (this.currentStep < this.stepsChild.length - 1) {
+      this.currentStep++;
+    }
+  }
+  beforeStep(): void {
+    if (this.currentStep > 0) {
+      this.currentStep--;
+    }
+  }
 }
