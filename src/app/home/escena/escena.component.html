@@ -17,16 +17,15 @@
                   <div class="current-step pb-3 d-flex align-items-center">
                     <span *ngFor="let step of stepsChild; let i = index" class="indicator"
                       [class.active]="i === currentStep">
-
                     </span>
                   </div>
                   <div class="navigation-buttons d-flex justify-content-end pb-3">
                     <button *ngIf="currentStep > 0" (click)="beforeStep()" class="border-0 bg-transparent">
-                      <img src="assets/arrow-left.svg" alt="arrow-left" width="30px">
+                      <img src="assets/arrow-left.svg" alt="arrow-left" class="w-30">
                     </button>
                     <button *ngIf="currentStep < stepsChild.length -1" (click)="nextStep()"
                       class="border-0 bg-transparent"><img src="assets/arrow-right.svg" alt="arrow-right"
-                        width="30px"></button>
+                        class="w-30"></button>
                   </div>
                 </div>
               </div>
