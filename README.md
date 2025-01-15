@@ -1,59 +1,119 @@
-# OnBoarding
+# S5. Onboarding digital (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Esta es una aplicación desarrollada con Angular que guía al usuario a través de un proceso de "onboarding". La aplicación incluye componentes reutilizables, servicios para la gestión de datos y animaciones para mejorar la experiencia del usuario.
 
-## Development server
+## 📄 Descripción
 
-To start a local development server, run:
+La aplicación está compuesta por dos componentes principales: `Home` y `Escena`. El componente `Home` sirve como contenedor para las escenas, mientras que `Escena` presenta frases motivadoras e instrucciones relacionadas con el aprendizaje y desarrollo personal.
 
-```bash
-ng serve
-```
+## ✨ Características
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Renderización dinámica de frases**:
 
-## Code scaffolding
+  Las frases se almacenan en un servicio llamado `StepsService` y se pasan al componente `Escena` mediante `@Input`.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+  - Las frases se renderizan dinámicamente utilizando `ngFor`.
 
-```bash
-ng generate component component-name
-```
+- **Navegación entre frases**:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+  - Los usuarios pueden navegar entre las frases utilizando botones "anterior" y "siguiente".
+  - Las frases activas se destacan visualmente con un diseño específico.
 
-```bash
-ng generate --help
-```
+- **Indicadores visuales**:
 
-## Building
+  - En la parte inferior izquierda de la pantalla se muestran indicadores que representan las frases disponibles.
+  - Al hacer clic en un indicador, se muestra la frase correspondiente.
 
-To build the project run:
+- **Animaciones**:
 
-```bash
-ng build
-```
+  - Transiciones animadas entre frases para una experiencia de usuario fluida.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **Diseño responsivo**:
+  - La aplicación está diseñada para adaptarse a diferentes tamaños de pantalla, ofreciendo una experiencia óptima en dispositivos móviles y de escritorio.
 
-## Running unit tests
+## 💻 Tecnologías Utilizadas
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- HTML5
+- SCSS
+- TypeScript
+- [Angular CLI](https://angular.dev/) version 19.0.0.
+- [Bootstrap 5](https://getbootstrap.com/)
 
-```bash
-ng test
-```
+## 📋 Requisitos
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+- Navegador web moderno.
+- Node.js y npm instalados en tu sistema. Puedes descargarlos desde [nodejs.org](https://nodejs.org/).
+- Angular CLI instalado globalmente. Puedes instalarlo con el siguiente comando:
 
 ```bash
-ng e2e
+npm install -g @angular/cli
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🛠️ Instalación
 
-## Additional Resources
+**✔️ Paso 1:** Clona el repositorio:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+git clone https://github.com/Victorreca/5-Angular
+```
+
+**✔️ Paso 2:** Ingresa al directorio del proyecto:
+
+```bash
+cd 5-Angular
+```
+
+**✔️ Paso 3:** Instala las dependencias:
+
+```bash
+npm install
+```
+
+**✔️ Paso 4:** Ejecuta Sass en modo automático:
+
+```bash
+npm run sass
+```
+
+**✔️ Paso 5:** (Opcional) Si necesitas compilar TypeScript automáticamente, usa el siguiente comando:
+
+```bash
+npx tsc --watch
+```
+
+**✔️ Paso 6:** Inicia el servidor de desarrollo:
+
+```bash
+ng serve -o
+```
+
+## 🛠️ Uso
+
+1. Acceso a la aplicación:
+
+- Una vez que el servidor de desarrollo esté en ejecución (ng serve -o), se abrirá automáticamente en el navegador en la dirección http://localhost:4200.
+- Si no se abre automáticamente, puedes acceder manualmente escribiendo esta dirección en tu navegador.
+
+2. Navegación por la aplicación:
+
+- Explora las frases motivadoras navegando entre ellas mediante los botones "Anterior" y "Siguiente".
+- Haz clic en las bolitas en la parte inferior izquierda para saltar directamente a una frase específica.
+
+3. Experiencia interactiva:
+
+- Observa las animaciones al cambiar entre frases.
+- Prueba la aplicación en diferentes dispositivos para experimentar su diseño responsivo.
+
+## 🤝 Contribuciones
+
+¡Gracias por tu interés en contribuir! Para colaborar:
+
+1. Realiza un fork del repositorio.
+2. Crea una rama para tu funcionalidad o corrección de errores:
+
+```bash
+git checkout -b nombre-rama
+```
+
+3. Realiza tus cambios y asegúrate de seguir las guías de estilo del código.
+4. Crea un pull request detallando los cambios realizados.
