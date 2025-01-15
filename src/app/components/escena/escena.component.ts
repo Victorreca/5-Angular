@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IStep } from '../interfaces/i-step';
+import { IStep } from '../../interfaces/i-step';
 import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 

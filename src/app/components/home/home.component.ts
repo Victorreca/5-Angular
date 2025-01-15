@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { EscenaComponent } from '../escena/escena.component';
-import { IStep } from '../interfaces/i-step';
-import { StepsService } from '../services/steps.service';
+import { IStep } from '../../interfaces/i-step';
+import { StepsService } from '../../services/steps.service';
 
 @Component({
   selector: 'app-home',
