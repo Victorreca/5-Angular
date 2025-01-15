@@ -5,12 +5,23 @@ $width-30: 30px;
 .w-30 {
   width: $width-30;
 }
+.m-center {
+  margin: 0 auto;
+}
 
 .navigation-buttons {
   position: relative;
   text-align: center;
 }
+
+.card {
+  width: 350px;
+}
+
 .carousel-inner {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   .img-cards {
     height: 300px;
     width: 100%;

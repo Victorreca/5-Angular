@@ -1,35 +1,25 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
-      <div id="carouselCards" class="carousel slide rounded-4 shadow my-4" data-bs-touch="false"
-        data-bs-interval="false">
-        <div class="carousel-inner">
-          <div *ngFor="let step of stepsChild; let i = index" class="carousel-item" [class.active]="i === currentStep">
-            <div class="card rounded-4">
-              <img [src]="step.img" class="card-img-top img-cards rounded-top-4" alt="{{step.title}}"
-                [style.backgroundColor]="step.bgcolor">
-              <div class="card-body">
-                <h5 class="card-title">{{step.title}}</h5>
-                <p class="card-text">{{step.description}}</p>
-              </div>
-              <div class="card-footer bg-transparent border-0">
-                <div class="d-flex justify-content-between">
-                  <div class="current-step pb-3 d-flex align-items-center">
-                    <span *ngFor="let step of stepsChild; let i = index" class="indicator"
-                      [class.active]="i === currentStep">
-                    </span>
-                  </div>
-                  <div class="navigation-buttons d-flex justify-content-end pb-3">
-                    <button *ngIf="currentStep > 0" (click)="beforeStep()" class="border-0 bg-transparent">
-                      <img src="assets/arrow-left.svg" alt="arrow-left" class="w-30">
-                    </button>
-                    <button *ngIf="currentStep < stepsChild.length -1" (click)="nextStep()"
-                      class="border-0 bg-transparent"><img src="assets/arrow-right.svg" alt="arrow-right"
-                        class="w-30"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
+<div class="carousel-inner d-flex">
+
+  <div *ngFor="let step of stepsChild; let i = index">
+    <div *ngIf="i === currentStep" @slideInOut class="card rounded-4">
+      <img [src]="step.img" class="card-img-top img-cards rounded-top-4" alt="{{step.title}}"
+        [style.backgroundColor]="step.bgcolor">
+      <div class="card-body">
+        <h5 class="card-title">{{step.title}}</h5>
+        <p class="card-text">{{step.description}}</p>
+      </div>
+      <div class="card-footer bg-transparent border-0">
+        <div class="d-flex justify-content-between">
+          <div class="current-step pb-3 d-flex align-items-center">
+            <span *ngFor="let step of stepsChild; let i = index" class="indicator" [class.active]="i === currentStep">
+            </span>
+          </div>
+          <div class="navigation-buttons d-flex justify-content-end pb-3">
+            <button *ngIf="currentStep > 0" (click)="beforeStep()" class="border-0 bg-transparent">
+              <img src="assets/arrow-left.svg" alt="arrow-left" class="w-30">
+            </button>
+            <button *ngIf="currentStep < stepsChild.length -1" (click)="nextStep()" class="border-0 bg-transparent"><img
+                src="assets/arrow-right.svg" alt="arrow-right" class="w-30"></button>
           </div>
         </div>
       </div>
